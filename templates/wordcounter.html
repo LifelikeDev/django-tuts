@@ -15,7 +15,8 @@
     </p>
     <p>Go ahead and give this a try.</p>
 
-    <form action="counter">
+    <form method="POST" action="counter">
+      {% csrf_token %}
       <textarea
         name="words"
         id="words"
