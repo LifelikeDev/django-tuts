@@ -15,6 +15,8 @@ def index(request):
 
 
 # word counter function
+
+
 def counter(request):
     words = request.POST['words']
     number_of_words = len(words.split())
