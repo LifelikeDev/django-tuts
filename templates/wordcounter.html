@@ -11,27 +11,31 @@
   </head>
 
   <body>
-    <h2>Hello friend</h2>
-    <p>
+    <h2 class="heading">Hello friend</h2>
+    <p class="description">
       Enter some words in the input field below and we'll tell you how many
       words are in there.
     </p>
-    <p>Go ahead and give this a try.</p>
+    <p class="description">Go ahead and give this a try.</p>
 
     <form method="POST" action="counter">
       {% csrf_token %}
-      <textarea
-        name="words"
-        id="words"
-        cols="50"
-        rows="10"
-        style="display: block; margin: 0 auto"
-      ></textarea>
-      <input
-        type="submit"
-        value="Count"
-        style="padding: 0.5rem 1rem; margin: 0.7rem 0"
-      />
+      <textarea name="words" id="words" cols="50" rows="10"></textarea>
+      <input type="submit" value="Count" class="submit-btn" />
     </form>
+
+    <section class="card-section">
+      <h2 class="heading">Features</h2>
+      <div class="card-body">
+        {% for feature in features %}
+
+        <div class="each-card" id="{{feature.id}}">
+          <h4 class="card-title">{{feature.title}}</h4>
+          <p class="description">{{feature.description}}</p>
+        </div>
+
+        {% endfor %}
+      </div>
+    </section>
   </body>
 </html>
