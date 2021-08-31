@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 
-class Features:
-    id: int
-    title: str
-    description: str
+class Feature(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
