@@ -10,12 +10,22 @@
     <title>Results Page - Simple Word Counter</title>
   </head>
   <body>
-    <h1 class="heading">Great Job!!!</h1>
+    {% if user.is_authenticated %}
+    <h2 class="heading">Great job, {{user.username}}!!!</h2>
+    {% else %}
+    <h2 class="heading">Great job, friend</h2>
+    {% endif %}
 
     <h3 class="description">
       You typed in
       <span>{{number_of_words}}</span>
       words.
     </h3>
+
+    <div class="input-option">
+      <a href="/">
+        <input class="submit-btn" type="submit" value="Back Home" />
+      </a>
+    </div>
   </body>
 </html>

@@ -11,7 +11,21 @@
   </head>
 
   <body>
-    <h2 class="heading">Hello friend</h2>
+    <nav>
+      <h2 class="heading">WordCounter</h2>
+
+      <form action="">
+        <input class="submit-btn" type="submit" value="" />
+        <input class="submit-btn" type="submit" value="Back Home" />
+      </form>
+    </nav>
+
+    {% if user.is_authenticated %}
+    <h2 class="heading">Hello, {{user.username}}</h2>
+    {% else %}
+    <h2 class="heading">Hello, friend</h2>
+    {% endif %}
+
     <p class="description">
       Enter some words in the input field below and we'll tell you how many
       words are in there.

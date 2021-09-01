@@ -71,14 +71,14 @@ textarea {
   font-size: 1.1rem;
 }
 
-.register-form {
+.user-form {
   margin: 0.5rem auto 2rem;
   padding: 2rem 0;
   max-width: 80%;
   width: 400px;
 }
 
-.register-form .input-option {
+.user-form .input-option {
   margin-bottom: 1rem;
 }
 
@@ -91,7 +91,7 @@ textarea {
   width: 80%;
 }
 
-.register-input {
+.form-input {
   background-color: #0a4939;
   border: none;
   color: #eee;
@@ -108,7 +108,9 @@ textarea {
   width: 20%;
 }
 
-.submit-btn.register-btn {
+.submit-btn.form-btn {
+  font-weight: 500;
   padding: 0.75rem 0.5rem;
   width: 180px;
+  letter-spacing: 1px;
 }
