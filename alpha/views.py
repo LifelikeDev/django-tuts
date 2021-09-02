@@ -67,3 +67,15 @@ def counter(request):
     number_of_words = len(words.split())
 
     return render(request, 'countedwords.html', {'number_of_words': number_of_words})
+
+
+def post_home(request):
+
+    posts = ['Matthew', 'Mark', 'Luke', 'John', 'Paul', 'Peter', 'James']
+
+    return render(request, 'post_home.html', {'posts': posts})
+
+
+def post(request, post_route):
+
+    return render(request, 'post.html', {'post_route': post_route})

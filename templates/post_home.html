@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <title>Home Posts</title>
+  </head>
+  <body>
+    <h3 class="description">
+      These are some of the posts our users have written
+    </h3>
+
+    {% for post in posts %}
+    <h4>
+      <a href="{% url 'post' post %}" class="description post">{{post}}</a>
+    </h4>
+    {% endfor %}
+  </body>
+</html>
