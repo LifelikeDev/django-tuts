@@ -10,13 +10,6 @@ def index(request):
     return render(request, 'wordcounter.html', {"features": features})
 
 
-def counter(request):
-    words = request.POST['words']
-    number_of_words = len(words.split())
-
-    return render(request, 'countedwords.html', {'number_of_words': number_of_words})
-
-
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -57,8 +50,20 @@ def login(request):
             auth.login(request, user)
             return redirect('/')
         else:
-            messages.info(request, 'The information you entered is invalid')
+            messages.info(request, 'Invalid username or password')
             return redirect('login')
 
     else:
         return render(request, 'login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+
+def counter(request):
+    words = request.POST['words']
+    number_of_words = len(words.split())
+
+    return render(request, 'countedwords.html', {'number_of_words': number_of_words})

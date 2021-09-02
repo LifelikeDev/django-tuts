@@ -4,6 +4,13 @@ body {
   text-align: center;
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
 .submit-btn {
   background-color: #063327;
   border: none;
@@ -48,6 +55,14 @@ textarea {
 .heading {
   font-family: "Poppins";
   font-size: 1.5em;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.logo {
+  font-family: "Roboto";
+  font-size: 1.6em;
+  font-style: italic;
   letter-spacing: 2px;
 }
 
@@ -113,4 +128,22 @@ textarea {
   padding: 0.75rem 0.5rem;
   width: 180px;
   letter-spacing: 1px;
+}
+
+.user-action {
+  margin-left: 2rem;
+  outline: 1px solid hsla(0, 0%, 93%, 0.767);
+}
+
+.user-deck {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* outline: 1px solid yellow; */
+}
+
+.username {
+  font-family: "Poppins";
+  font-size: 1em;
+  font-style: italic;
 }
